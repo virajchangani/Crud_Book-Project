@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="../public/edit.css">
+</head>
+<body>
+    <form action="/updateData" method="post">
+        <h1 style="text-align: center;">Edit</h1>
+        <input type="text" value="<%= singleData.id %>" hidden name="id">
+        <input type="text" value="<%= singleData.bookName %>" placeholder="Book Name" name="bookName">
+        <input type="text" value="<%= singleData.authorName %>" placeholder="Author Name" name="authorName">
+        <input type="number" value="<%= singleData.bookPrice %>" placeholder="Book Price" name="bookPrice">
+        <input type="number" value="<%= singleData.publishYear %>" placeholder="Publish Year" name="publishYear">
+        <input type="text" value="<%= singleData.language %>" placeholder="Language" name="language">
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
